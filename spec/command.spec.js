@@ -10,11 +10,11 @@ describe("Command class", function() {
   });
   test("constructor sets command type", function () {
     let newCommand = new Command("MOVE", 100);
-    expect(newCommand).toHaveProperty("commandType");
+    expect(newCommand.commandType).toEqual("MOVE");
   });
   test("constructor sets a value passed in as the 2nd argument", function() {
     let newCommand = new Command("MOVE", 100);
-    expect(newCommand).toHaveProperty("value");
+    expect(newCommand.value).toEqual(100);
   });
 
 });

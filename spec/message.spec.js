@@ -14,7 +14,7 @@ describe("Message class", function() {
         expect( function() { new Message();}).toThrow(new Error('Message name required.'));
     });
     test("constructor sets name", function() {
-       expect(newMessage).toHaveProperty("name");
+       expect(newMessage.name).toEqual("test message");
     });
     test("contains a commands array passed into the constructor as the 2nd argument", function() {
         expect(newMessage.commands).toEqual(commands);
